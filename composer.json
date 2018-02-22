@@ -34,7 +34,7 @@
         "amphp/amp": "^2",
         "amphp/dns": "dev-tvg",
         "amphp/byte-stream": "^1.1",
-        "amphp/uri": "^0.1"
+        "amphp/uri": "dev-tvg"
     },
     "require-dev": {
         "amphp/phpunit-util": "^1",
