@@ -76,8 +76,13 @@ function connect(string $uri, ClientConnectContext $socketContext = null, Cancel
         if ($host[0] === '[') {
             $host = substr($host, 1, -1);
         }
-
-        if ($port === 0 || @\inet_pton($host)) {
+        /**
+        * @author mihai
+        * added extra condition to check if $host is an actual IP
+        * @source if ($port === 0 || @\inet_pton($host)) {
+        *
+        */
+        if ($port === 0 || (\filter_var($host, FILTER_VALIDATE_IP) && \inet_pton($host))) {
             // Host is already an IP address or file path.
             $uris = [$uri];
         } else {
