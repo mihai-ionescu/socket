@@ -60,7 +60,7 @@
         "php": ">=7.0",
         "amphp/amp": "^2",
         "amphp/dns": "dev-master",
-        "amphp/byte-stream": "dev-master",
+        "amphp/byte-stream": "^1.1.6",
         "amphp/uri": "dev-master"
     },
     "require-dev": {
